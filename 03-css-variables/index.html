@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Giovanni Orlando Rivera">
+    <meta name="description" content="javascript-30 challenge, day 03: CSS Variables">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#3F51B5">
+    <!-- Enforce ssl -->
+    <script>
+      const host = 'giovanni-orlando.com';
+      if ((host === window.location.host || `www.${host}` === window.location.host) && (window.location.protocol !== 'https:')) {
+        window.location.protocol = 'https:'
+      }
+    </script>
+
+    <title>CSS Variables</title>
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="canonical" href="https://giovanni-orlando.com/javascript-30/03-css-variables/">
+    <!--<link rel="manifest" href="/manifest.json">-->
+
+
+    <style media="screen">
+      :root {
+        --color-primary: #3F51B5;
+        --color-primary-dark: #1A237E;
+        --color-primary-light: #E8EAF6;
+        --color-primary-accent: #3D5AFE;
+      }
+      
+      * {
+        box-sizing: border-box;
+      }
+      
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        color: var(--color-primary-accent);
+        text-align: center;
+      }
+      
+      .content {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: var(--color-primary-light);
+      }
+      
+      .flex-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .img-import {
+        max-width: 80%;
+        display: flex;
+        margin: 0 auto;
+      }
+      
+      input {
+        width: 100px;
+      }
+      
+      .controls {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2em;
+      }
+    </style>
+
+
+    <!-- scripts.js -->
+    <script defer src="Controls.js" charset="utf-8"></script>
+    <!-- styles.css -->
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+</head>
+
+<body>
+  <main class="content flex-center">
+
+    <h2>Javascript-30, Day 03:
+      <br>
+      Update CSS Variables with <span class='hl'>JS</span>
+    </h2>
+    <div class="controls ">
+      <div class="controls__wrapper flex-center">
+        <label for="spacing">Spacing:</label>
+        <input type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+      </div>
+
+      <div class="controls__wrapper flex-center">
+        <label for="blur">Blur:</label>
+        <input type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+      </div>
+
+      <div class="controls__wrapper flex-center">
+        <label for="base">Color:</label>
+        <input type="color" name="base" value="#ffc600">
+      </div>
+    </div>
+
+    <img class="img-import" src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+  </main>
+</body>
+
+</html>
